@@ -1,16 +1,14 @@
-data:
-  image: tianon/true 
-  volumes:
-    - /data
+version: "2"
 
-config:
-  image: tianon/true 
-  volumes:
-    - /config
+services:
+  service:
+    image: 172.28.128.1:5000/block:irssi
+    ports:
+      - 2222
+    volumes:
+      - data:/data
+      - config:/config
 
-service:
-  image: 172.28.128.1:5000/block:irssi
-  volumes_from:
-    - data
-    - config
-  tty: true
+volumes:
+  data:
+  config:
