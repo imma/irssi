@@ -1,19 +1,19 @@
 {
   "version": "2",
-  "services": {
-    "service": {
-      "image": "172.28.128.1:5000/block:irssi",
-      "ports": [
-        2222
-      ],
-      "volumes": [
-        "data:/data",
-        "config:/config"
-      ]
-    }
-  },
   "volumes": {
     "data": {},
     "config": {}
+  },
+  "services": {
+    "service": {
+      "volumes": [
+        "data:/data",
+        "config:/config"
+      ],
+      "ports": [
+        2222
+      ],
+      "image": "172.28.128.1:5000/block:irssi"
+    }
   }
 }
