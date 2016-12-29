@@ -1,0 +1,16 @@
+data:
+  image: tianon/true 
+  volumes:
+    - /data
+
+config:
+  image: tianon/true 
+  volumes:
+    - /config
+
+service:
+  image: 172.28.128.1:5000/block:irssi
+  volumes_from:
+    - data
+    - config
+  tty: true
