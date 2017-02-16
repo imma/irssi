@@ -22,11 +22,11 @@
       "networks": {
         "default": {
           "ipv4_address": "${NET_PREFIX}.10"
-        },
-        "dns_search": "node.consul",
-        "image": "${BLOCK_REGISTRY}/block:irssi",
-        "hostname": "irssi"
-      }
+        }
+      },
+      "dns_search": "node.consul",
+      "image": "${BLOCK_REGISTRY}/block:irssi",
+      "hostname": "irssi"
     }
   }
 }
