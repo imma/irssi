@@ -1,0 +1,31 @@
+{
+  "version": "2.1",
+  "networks": {
+    "default": {
+      "external": {
+        "name": "admin_default"
+      }
+    }
+  },
+  "services": {
+    "irssi": {
+      "volumes": [
+        "/data:/data",
+        "/config:/config"
+      ],
+      "ports": [
+        "${BLOCK_SSH_PORT}"
+      ],
+      "cap_add": [
+        "NET_ADMIN"
+      ],
+      "networks": {
+        "default": {
+          "ipv4_address": "${NET_PREFIX}.10"
+      },
+      "dns_search": "node.consul",
+      "image": "${BLOCK_REGISTRY}/block:irssi",
+      "hostname": "irssi"
+    }
+  }
+}
