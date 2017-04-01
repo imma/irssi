@@ -24,7 +24,7 @@
           "ipv4_address": "${NET_PREFIX}.10"
         }
       },
-      "dns_search": "dc1.node.consul",
+      "dns_search": "node.dc1.consul",
       "image": "${BLOCK_REGISTRY}/block:irssi",
       "hostname": "irssi"
     }
