@@ -5,6 +5,9 @@ function home_bootstrap {
   source "$shome/script/profile"
 
   pkg ensure chat/irssi
+
+  rsync -ia $PKGWIPDIR/znc $PKGSRCDIR/net/
+  pkg ensure net/znc
 }
 
 home_bootstrap "$@"
