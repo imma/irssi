@@ -8,10 +8,6 @@ function main {
     return 0
   fi
 
-  if type -P znc >/dev/null; then
-    return 0
-  fi
-
   return 1
 }
 
